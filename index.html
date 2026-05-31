@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>自己紹介サイト</title>
 
   <style>
@@ -12,246 +12,88 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
       color: #222;
-      background: #f7f8fc;
+      line-height: 1.8;
     }
 
     header {
       background: linear-gradient(135deg, #5b6ee1, #8b5cf6);
       color: white;
-      padding: 70px 20px 90px;
       text-align: center;
+      padding: 60px 20px;
     }
 
     header h1 {
-      font-size: 2.4rem;
-      margin-bottom: 15px;
+      font-size: 2.3rem;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.1rem;
-      opacity: 0.95;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: white;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      list-style: none;
-    }
-
-    nav a {
-      display: block;
-      padding: 15px 18px;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #5b6ee1;
-      background: #f0f2ff;
+      font-size: 1rem;
     }
 
     main {
-      max-width: 1000px;
-      margin: -45px auto 0;
-      padding: 0 20px 50px;
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     section {
       background: white;
-      margin-bottom: 30px;
       padding: 35px;
       border-radius: 18px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     }
 
-    section h2 {
+    h2 {
       color: #5b6ee1;
-      margin-bottom: 18px;
       font-size: 1.8rem;
+      margin-bottom: 20px;
       border-left: 6px solid #8b5cf6;
       padding-left: 12px;
     }
 
     .profile {
-      display: grid;
-      grid-template-columns: 160px 1fr;
+      display: flex;
       gap: 25px;
       align-items: center;
     }
 
-    .avatar {
-      width: 150px;
-      height: 150px;
+    .icon {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #c7d2fe, #ddd6fe);
+      background: #ddd6fe;
+      color: #5b21b6;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 4rem;
-      color: #5b6ee1;
-      margin: 0 auto;
+      font-size: 3.5rem;
+      flex-shrink: 0;
     }
 
-    .profile-text p {
+    .profile-text h3 {
+      font-size: 1.5rem;
       margin-bottom: 10px;
     }
 
-    .name {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .skill-card {
-      background: #f5f6ff;
-      padding: 22px;
-      border-radius: 14px;
-      border: 1px solid #e3e6ff;
-    }
-
-    .skill-card h3 {
-      color: #5b6ee1;
-      margin-bottom: 8px;
-    }
-
-    .works {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .work-card {
-      background: #fafafa;
-      border-radius: 14px;
-      padding: 22px;
-      border: 1px solid #e5e7eb;
-      transition: 0.3s;
-    }
-
-    .work-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    }
-
-    .work-card h3 {
-      color: #333;
-      margin-bottom: 8px;
-    }
-
-    .tag {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 4px 10px;
-      background: #ede9fe;
-      color: #6d28d9;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: bold;
-    }
-
-    .reflection-box {
-      background: #f5f6ff;
-      padding: 24px;
-      border-radius: 14px;
-      border-left: 5px solid #5b6ee1;
-    }
-
-    .button-area {
-      text-align: center;
-      margin-top: 25px;
-    }
-
-    button {
-      border: none;
-      background: #5b6ee1;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 999px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #4338ca;
-      transform: scale(1.04);
+    .profile-text p {
+      margin-bottom: 12px;
     }
 
     footer {
       text-align: center;
-      padding: 30px 20px;
       color: #666;
+      padding: 30px;
       font-size: 0.9rem;
     }
 
-    .dark {
-      background: #111827;
-      color: #f3f4f6;
-    }
-
-    .dark nav,
-    .dark section {
-      background: #1f2937;
-      color: #f3f4f6;
-    }
-
-    .dark nav a {
-      color: #f3f4f6;
-    }
-
-    .dark .skill-card,
-    .dark .work-card,
-    .dark .reflection-box {
-      background: #273449;
-      border-color: #374151;
-    }
-
-    .dark .name,
-    .dark .work-card h3 {
-      color: #f3f4f6;
-    }
-
-    .dark footer {
-      color: #d1d5db;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        padding: 55px 18px 75px;
-      }
-
+    @media (max-width: 700px) {
       header h1 {
-        font-size: 2rem;
-      }
-
-      main {
-        margin-top: -35px;
-        padding: 0 15px 40px;
+        font-size: 1.9rem;
       }
 
       section {
@@ -259,18 +101,8 @@
       }
 
       .profile {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
-      }
-
-      .skills,
-      .works {
-        grid-template-columns: 1fr;
-      }
-
-      nav a {
-        padding: 12px 14px;
-        font-size: 0.95rem;
       }
     }
   </style>
@@ -279,117 +111,32 @@
 <body>
   <header>
     <h1>自己紹介サイト</h1>
-    <p>学んだことや制作したものをまとめたポートフォリオです</p>
+    <p>自分について紹介するページです</p>
   </header>
-
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#works">Works</a></li>
-      <li><a href="#reflection">Reflection</a></li>
-    </ul>
-  </nav>
 
   <main>
     <section id="about">
       <h2>About</h2>
+
       <div class="profile">
-        <div class="avatar">☺</div>
+        <div class="icon">☺</div>
+
         <div class="profile-text">
-          <p class="name">名前：〇〇 〇〇</p>
-          <p>
-            私は、Web制作やプログラミングに興味があります。
-            見やすく、使いやすいデザインを意識しながら、
-            自分の考えを形にすることを大切にしています。
-          </p>
-          <p>
-            趣味は音楽を聴くこと、動画を見ること、気になったことを調べることです。
-            これからも新しい技術を少しずつ学んでいきたいです。
-          </p>
-        </div>
-      </div>
-    </section>
+          <h3>名前：〇〇 〇〇</h3>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="skill-card">
-          <h3>HTML</h3>
           <p>
-            見出し、文章、リンク、リストなどを使って、
-            Webページの基本的な構造を作ることができます。
+            私は、Pythonなどのプログラミングに興味があります。
+            授業を通してHTMLやCSSを学び、Webページを作成しました。
+          </p>
+
+          <p>
+            趣味はゲームをすることや動画を見ることです。
+          </p>
+
+          <p>
+            これからも少しずつ知識を増やして、このWebページをアップデートしていきたいです。
           </p>
         </div>
-
-        <div class="skill-card">
-          <h3>CSS</h3>
-          <p>
-            色、余白、レイアウト、レスポンシブ対応を使って、
-            読みやすいデザインを作ることができます。
-          </p>
-        </div>
-
-        <div class="skill-card">
-          <h3>JavaScript</h3>
-          <p>
-            ボタン操作や表示の切り替えなど、
-            ページに簡単な動きをつけることができます。
-          </p>
-        </div>
-      </div>
-
-      <div class="button-area">
-        <button id="themeButton">背景モードを切り替える</button>
-      </div>
-    </section>
-
-    <section id="works">
-      <h2>Works</h2>
-      <div class="works">
-        <div class="work-card">
-          <h3>自己紹介ページ</h3>
-          <p>
-            HTMLとCSSを使って、自分のプロフィールを紹介するページを作成しました。
-          </p>
-          <span class="tag">HTML / CSS</span>
-        </div>
-
-        <div class="work-card">
-          <h3>簡単な計算プログラム</h3>
-          <p>
-            JavaScriptを使って、入力した数値を計算する仕組みを学びました。
-          </p>
-          <span class="tag">JavaScript</span>
-        </div>
-
-        <div class="work-card">
-          <h3>授業課題</h3>
-          <p>
-            授業で学んだ内容をもとに、Webページの構成やデザインを練習しました。
-          </p>
-          <span class="tag">School Work</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="reflection">
-      <h2>Reflection</h2>
-      <div class="reflection-box">
-        <p>
-          今回のWebサイト制作を通して、HTMLでページの構造を作り、
-          CSSで見た目を整え、JavaScriptで動きを加える流れを学びました。
-        </p>
-        <p>
-          特に、スマートフォンでも見やすいように画面幅に合わせて
-          レイアウトを変えることの大切さが分かりました。
-          最初は難しく感じましたが、少しずつ調整することで
-          自分のイメージに近いページを作ることができました。
-        </p>
-        <p>
-          今後は、より分かりやすいデザインや使いやすい機能を考えながら、
-          Web制作の力を伸ばしていきたいです。
-        </p>
       </div>
     </section>
   </main>
@@ -397,19 +144,5 @@
   <footer>
     <p>&copy; 2026 自己紹介サイト</p>
   </footer>
-
-  <script>
-    const themeButton = document.getElementById("themeButton");
-
-    themeButton.addEventListener("click", function () {
-      document.body.classList.toggle("dark");
-
-      if (document.body.classList.contains("dark")) {
-        themeButton.textContent = "明るいモードに戻す";
-      } else {
-        themeButton.textContent = "背景モードを切り替える";
-      }
-    });
-  </script>
 </body>
 </html>
